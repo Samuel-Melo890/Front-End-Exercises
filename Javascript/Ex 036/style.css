@@ -1,0 +1,8 @@
+table, th, tr, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+p {
+    margin: 0px;
+    font-weight: 900;
+}

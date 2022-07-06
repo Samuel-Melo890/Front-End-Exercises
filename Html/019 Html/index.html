@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Html Example</title>
+</head>
+
+<body>
+    <h1>Título 1</h1>
+    <p>Parágrafo 1</p>
+
+    <form action="C:\Users\saymu\Desktop\Html\Html Estudo\018 Html\index.html" target="_blank" 
+    method="post" autocomplete="on" oninput="x=a+b" id="form1" novalidate>
+    <label for="Fname">First Name:</label> <br>
+    <input type="text" id="Fname" name="Fname" style="width:120px" required> <br>
+    <label for="Lname">Last Name:</label> <br>
+    <input type="text" id="Lname" name="Lname" style="width:120px"> <br>
+    <label for="age">Age:</label> <br>
+    <input type="number" id="age" name="age" min="1" max="100" style="width:120px"> <br>
+    <label for="psw">Password:</label> <br>
+    <input type="password" id="psw" name="psw" style="width:120px" required> <br>
+    <label for="date_bd">Birthday:</label> <br>
+    <input type="date" id="date_bd" name="date_bd" min="1920-06-23"> <br>
+    <label for="plahol">Hobbys:</label> <br>
+    <input type="text" id="plahol" name="plahol" placeholder="Esportes, gostos..."
+    style="width:120px"> <br>
+
+    <br> 
+    <label for="games">Games:</label> <br>
+    <select id="games" name="games" size="3" multiple>
+    <option value="minecraft">Minecraft</option>
+    <option value="dark souls">Dark Souls</option>
+    <option value="elden ring">Elden Ring</option>
+    <option value="league of legends">League of Legends</option>
+    <option value="roblox" selected>Roblox</option>
+    </select> <br>
+    
+    <label for="description">Game Description:</label> <br>
+    <textarea id="description" name="description" rows="8" cols="25">
+Jogo bom e divertido!
+    </textarea> <br>
+    <button type="button" onclick="command">Botão Vazio</button> <br>
+
+    <br> 
+    <fieldset>
+    <legend>Minecraft:</legend>
+    <p>Minecraft is a video game in which players create and break apart various kinds of blocks 
+        in three-dimensional worlds. The game's two main modes are Survival and Creative. In 
+        Survival, players must find their own building supplies and food. They also interact with 
+        blocklike mobs, or moving creatures.</p>
+    </fieldset>
+
+    <label for="dlist">Characters list:</label>
+    <input list="c_list" id="dlist" name="dlist">
+    <datalist id="c_list">
+    <option value="Jeanne D'arc"></option>
+    <option value="Goku"></option>
+    <option value="Vegeta"></option>
+    <option value="Gon"></option>
+    <option value="Killua"></option>
+    </datalist> <br>
+
+    <label for="calculate">Calculator:</label> <br>
+    <input type="range" id="a" name="a" value="50" step="10">
+    <input type="range" id="b" name="b" value="50">
+    <output name="x" for="a b"></output> <br>
+
+    <label>Language Selection:</label> <br>
+    <input type="radio" id="html" name="radbut" value="html">
+    <label for="html">Html</label> <br>
+    <input type="radio" id="javascript" name="radbut" value="javascript">
+    <label for="javascript">Javascript</label> <br>
+    <input type="radio" id="python" name="radbut" value="python">
+    <label for="python">Python</label> <br>
+
+    <br>
+    <label>Country Selection:</label> <br>
+    <input type="checkbox" id="brasil" name="checklist" value="brasil">
+    <label for="brasil">Brasil</label> <br>
+    <input type="checkbox" id="portugal" name="checklist" value="portugal">
+    <label for="portugal">Portugal</label> <br>
+    <input type="checkbox" id="angola" name="checklist" value="angola">
+    <label for="angola">Angola</label> <br>
+
+    <label for="favcolor">Favorite Color:</label> <br>
+    <input type="color" id="favcolor" name="favcolor"> <br>
+
+    <label for="arq">File:</label> <br>
+    <input type="file" id="arq" name="arq"> <br>
+
+    <label for="fix">Read Only Input:</label> <br>
+    <input type="text" id="fix" name="fix" readonly> <br>
+
+    <input type="reset" style="margin-left:5px; margin-top:5px;">
+    <input type="submit" value="Submit" 
+    formaction="C:\Users\saymu\Desktop\Html\Html Estudo\018 Html\index.html">
+    <input type="button" onclick="comando" name="botao" disabled>
+    </form>
+
+    <input type="text" id="inputform1" name="inputform1" form="form1">
+</body>
+</html>

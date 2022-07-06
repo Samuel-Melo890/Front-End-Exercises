@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Html DOM 3</h1>
+    </header>
+
+    <main>
+        <section id="section1">
+            <h2>Max And Min Values:</h2>
+
+            <label for="max">Max Value:</label>
+            <br>
+            <input type="number" id="max" onkeyup="checkInput()">
+            <br>
+            <label for="min">Min Value:</label>
+            <br>
+            <input type="number" id="min" onkeyup="checkInput()">
+            <br>
+            <br>
+            <button type="button" onclick="showInterval()">Show Interval</button>
+            <p id="interval" style="font-style:italic;"></p>
+        </section>
+
+        <section id="section2">
+            <h2>Factorial And Execution Time</h2>
+
+            <label for="factorial">Number to Get The Factorial:</label>
+            <br>
+            <input type="number" id="factorial">
+            <br>
+            <br>
+            <button type="button" onclick="calculateFact()">Calculate</button>
+            <p id="executionTime" style="font-style:italic;"></p>
+        </section>
+    </main>
+</body>
+</html>

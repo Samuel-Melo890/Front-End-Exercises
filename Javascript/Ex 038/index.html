@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Objects 2</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bubble Sort:</h2>
+            <button type="button" onclick="sortArray()">Sort Random Array</button>
+            <p id="sorted"></p>
+        </section>
+        <br>
+
+        <section>
+            <h2>Sorting an Array of Objects:</h2>
+            <label for="options">Select an Option to Sort:</label>
+            <br>
+            <input type="radio" value="firstName" name="options" checked>First Name
+            <br>
+            <input type="radio" value="age" name="options">Age
+            <br>
+            <input type="radio" value="lastName" name="options">Last Name
+            <br>
+            <button type="button" onclick="sortObjects()">Sort Array with Objects</button>
+            <div id="sortedObjects"></div>
+        </section>
+    </main>
+</body>
+</html>

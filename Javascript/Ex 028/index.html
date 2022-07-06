@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+
+    <script src="script.js"></script>
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        tr {
+            border: 2px solid black;
+        }
+        td {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>More Calculations</h1>
+    </header>
+
+    <main>
+        <section>
+            <button type="button" onclick="showFibonacci()">Show Fibonacci</button>
+            <p id="fibonacci" style="font-style:italic;"></p>
+        </section>
+        <br>
+
+        <section>
+            <button type="button" onclick="showPrimeNumber()">Show 1001 Prime Number</button>
+        </section>
+        <br>
+
+        <section>
+            <button type="button" onclick="primeTo200()">Show Prime Numbers (0 to 200)</button>
+            <br>
+            <table id="prime_0to200"></table>
+        </section>
+    </main>
+</body>
+</html>

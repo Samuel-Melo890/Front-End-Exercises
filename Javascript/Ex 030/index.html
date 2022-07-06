@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <header>
+        <h1>String and Potency</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Invert a String</h2>
+            <input type="text" placeholder="Some text" id="text1"/>
+            <br>
+            <button type="button" id="myBtn1">Invert String</button>
+            <p id="invertedString" style="font-style:italic;"></p>
+        </section>
+        <br>
+
+        <section>
+            <h2>Random Potency</h2>
+            <button type="button" id="myBtn2">Show Random Potency</button>
+        </section>
+    </main>
+    
+    <script>
+        document.getElementById('myBtn1').onclick = invertString;
+        document.getElementById('myBtn2').addEventListener('click', randomPotency);
+
+        function invertString() {
+            let txt = document.getElementById('text1').value;
+            let txtArray = txt.split('');
+            let len = txtArray.length;
+            let newTxt = '';
+
+            do {
+                newTxt += txtArray[len - 1];
+                len--;
+            } while(len > 0);
+
+            document.getElementById('invertedString').innerHTML = newTxt;
+        }
+
+        function randomPotency() {
+            let base = Math.floor(Math.random() * 20) + 1;
+            let exponent = Math.floor(Math.random() * 5);
+
+            alert(`The potency expression is:\n${base}^${exponent} = ${base ** exponent}`);
+        }
+    </script>
+</body>
+</html>

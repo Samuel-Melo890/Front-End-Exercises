@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+
+    <script src="script.js"></script>
+</head>
+
+<body id="body" onload="loaded()">
+    <header>
+        <h1>Inputs</h1>
+    </header>
+
+    <main>
+        <input type="text" id="s1"/>
+        +
+        <input type="text" id="s2"/>
+        =
+        <p id="result" style="display:inline;"></p>
+        <br>
+        <button type="button" onclick="sum()">Sum</button>
+        <br>
+        <button type="button" onclick="red()">Red</button>
+        <button type="button" onclick="green()">Green</button>
+        <br>
+        <br>
+        <br>
+
+        <button type="button" onclick="loadedAgain()">Page Loaded</button>
+        <div id="loaded" style="display:block; font-style:italic;"></div>
+    </main>
+</body>
+</html>
