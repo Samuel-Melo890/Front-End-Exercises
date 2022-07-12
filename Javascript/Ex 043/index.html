@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Functions</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Reversing a Number:</h2>
+            <label for="num">Number:</label>
+            <br>
+            <input type="number" placeholder="Positive Number" id="num"/>
+            <br>
+            <button type="button" onclick=
+            "reverse(document.getElementById('num').value)">Reverse Number</button>
+            <div id="reversed"></div>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Alphabetical Order:</h2>
+            <label for="txt1">Some Text:</label>
+            <br>
+            <input type="text" placeholder="Some text" maxlength="50" 
+            onkeyup="alpha(this.value)"/>
+            <br>
+            <div id="alphabeticalOrder"></div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dates</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Number of Days in a Month:</h2>
+            <label for="month">Month:</label>
+            <br>
+            <input type="number" placeholder="Month" id="month" max="12" min="1"/>
+            <br>
+            <label for="year">Year:</label>
+            <br>
+            <input type="number" placeholder="Year" id="year" min="1"/>
+            <br>
+            <button type="button" onclick=
+            "showDays(document.getElementById('month').value, document.getElementById('year').value)">
+            Show Number of Days</button>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Comparing Dates:</h2>
+            <label for="date1">Date 1:</label>
+            <br>
+            <input type="date" placeholder="Date 1" id="date1"/>
+            <br>
+            <label for="date2">Date 2:</label>
+            <br>
+            <input type="date" placeholder="Date 2" id="date2"/>
+            <br>
+            <button type="button" onclick="compareDates()">Compare Dates</button>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Time Converting:</h2>
+            <label for="minutes">Minutes:</label>
+            <br>
+            <input type="number" placeholder="Number of Minutes (standard = 0)" id="minutes" 
+            style="width:220px"/>
+            <br>
+            <button type="button" onclick="timeConvert()">Convert Time</button>
+        </section>
+        <hr>
+    </main>
+</body>
+</html>
