@@ -1,0 +1,17 @@
+{
+    "knight": {
+        "health": 150,
+        "damage": 40,
+        "speed": 20
+    },
+    "archer": {
+        "health": 110,
+        "damage": 25,
+        "speed": 50
+    },
+    "mage": {
+        "health": 80,
+        "damage": 65,
+        "speed": 10
+    }
+}

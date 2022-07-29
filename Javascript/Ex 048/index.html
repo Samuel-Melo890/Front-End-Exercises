@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Promises and Async</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Hello World Promise:</h2>
+            <button type="button" onclick="hello()">Hello World</button>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Detecting Odd and Pair Numbers With Promises:</h2>
+            <label for="num">Number:</label>
+            <input type="number" placeholder="Any Number" id="num"/>
+            <br>
+            <button type="button" onclick="oddPair(document.getElementById('num').value)">
+            Odd or Pair?</button>
+            <div id="oddPair"></div>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Fetching a Country:</h2>
+            <label for="country">Country:</label>
+            <input type="text" placeholder="Country" id="country" maxlength="100"/>
+            <br>
+            <button type="button" onclick="fetchCountry(document.getElementById('country').value).then(value => display(value))">Fetch Country</button>
+        </section>
+        <hr>
+    </main>
+</body>
+</html>
