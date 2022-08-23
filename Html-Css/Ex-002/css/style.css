@@ -61,22 +61,29 @@ body {
     position: absolute;
     bottom: 0;
     clear: left;
-    background-color: black;
-    padding: 1em;
-    width: 100%;
+    background-color: darkgray;
+    padding: 0.33em;
+    width: 35%;
+    border: 0.1em solid darkgray;
+    border-top-right-radius: 1em;
+    margin-top: 1em;
 }
 
 .furtherInfo strong {
-    color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .furtherInfo a {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-left: 1%;
 }
 
+/* Links */
 a:link {
-    color: cyan;
+    color: black;
+}
+
+a:hover {
+    color: darkcyan;
 }

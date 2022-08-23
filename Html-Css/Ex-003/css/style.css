@@ -1,0 +1,93 @@
+/* Overall style */
+body {
+    margin: 0;
+    background: url(../images/background.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Header */
+header {
+    margin-bottom: 7em;
+}
+
+.mainHeader {
+    float: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 3%;
+    margin-right: 20em;
+    text-shadow: 0.15em 0.15em 0.2em gray;
+}
+
+.descHeader {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.02em;
+    margin-right: 5em;
+}
+
+.descHeader h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    text-shadow: 0.15em 0.15em 0.2em gray;
+}
+
+/* Class crewImages */
+.crewImages {
+    clear: left;
+    margin-left: 5%;
+    font-family: Helvetica, sans-serif
+}
+
+.crewImages > div {
+    float: left;
+    position: relative;
+    min-width: 30%;
+    margin-bottom: 5em;
+    margin-right: 2.5em;
+}
+
+img {
+    object-fit: contain;
+    width: 15em;
+    height: 15em;
+}
+
+.crewImages strong {
+    position: absolute;
+    top: 0;
+    right: 4.5em;
+    writing-mode: vertical-rl;
+    font-size: 1.2em;
+    font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.crewImages > div > div {
+    max-width: fit-content;
+    border: 0.05em solid black;
+    background: rgb(245, 238, 229);
+}
+
+.crewImages > div > div > div {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    background: rgb(255, 150, 80);
+}
+
+/* Footer author */
+.author {
+    clear: left;
+    text-align: center;
+    width: 100%;
+    color: gray;
+    background: white;
+    font-size: 1.2em;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.author strong {
+    text-decoration: underline;
+}
