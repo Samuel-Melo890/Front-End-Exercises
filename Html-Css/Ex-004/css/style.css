@@ -1,0 +1,304 @@
+/* -- Body -- */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: PT-Sans, sans-serif;
+    box-sizing: border-box;
+}
+
+/* -- Header -- */
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#title {
+    margin: 4% 2.5%;
+    border: 2px solid white;
+    font-family: PT-Serif, serif;
+    font-size: 1.3em;
+    font-weight: lighter;
+    text-align: center;
+    padding: 0.2em 0.5em;
+}
+
+#linkIcon {
+    margin: auto 5% auto 0;
+    font-size: 2.3em;
+    cursor: pointer;
+}
+
+#navBar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    transition: all .3s linear;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+
+/* -- Description -- */
+#description {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#secTitle {
+    margin: 6% 0 2.5% 2.5%;
+    font-family: PT-Serif, serif;
+    font-size: 2.5em;
+}
+
+#description p {
+    margin-left: 2.5%;
+    word-wrap: break-word;
+}
+
+#readMore {
+    margin-left: 2.5%;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#readMore span {
+    font-size: 1.3em;
+}
+
+/* -- Sample -- */
+#sample > div {
+    position: relative;
+}
+
+#sample > div > img {
+    width: 97%;
+    margin: 3em 0;
+    padding: 0 1.5%;
+    object-fit: contain;
+}
+
+#comment {
+    background-color: black;
+    position: absolute;
+    right: 5%;
+    bottom: -10%;
+    padding: 1.5%;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    box-shadow: 2px 2px 5px darkslategrey;
+}
+
+#comment > div {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 75%; 
+    margin-left: 5%;
+}
+
+#comment > div p {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#comment #occupation {
+    font-weight: lighter;
+    color: darkgray;
+}
+
+#comment img {
+    max-width: 20%;
+}
+
+#comment > p {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+#comment > p span {
+    text-decoration: underline;
+}
+
+/* -- Footer -- */
+footer {
+    margin-top: 6em;
+    text-align: center;
+}
+
+footer span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* -- Media Queries -- */
+
+/* Medium Devices */
+@media only screen and (min-width: 600px) {
+    /* -- Comment -- */
+    #comment {
+        max-width: 60%;
+        bottom: 0;
+    }
+
+    #comment > div {
+        font-size: 1.1em;
+    }
+}
+
+/* Larger Devices */
+@media only screen and (min-width: 768px) {
+    /* -- Description -- */
+    #description p {
+        max-width: 90%;
+    }
+
+    /* -- Comment -- */
+    #comment {
+        width: 45%;
+    }
+
+    #comment > div {
+        font-size: 1.3em;
+    }
+
+    /* -- NavBar -- */
+    #linkIcon {
+        display: none;
+    }
+
+    #navBar {
+        position: relative;
+        width: 70%;
+        margin: auto 0;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .navLink {
+        font-size: 1.5em;
+        transition: none;
+    }
+
+    .navLink:hover, .active {
+        text-decoration: underline;
+        text-underline-offset: 0.3em;
+    }
+}
+
+/* Big Devices */
+@media only screen and (min-width: 1024px) {
+    /* -- Main -- */
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        /*margin-left: 0;*/
+    }
+
+    /* -- Description -- */
+    #description {
+        flex-basis: 35%;
+        align-self: center;
+        word-wrap: break-word;
+    }
+
+    /* -- Sample -- */
+    #sample {
+        flex-basis: 60%;
+    }
+
+    #sample > div > img {
+        max-width: 100%;
+        height: 30em;
+        padding: 0;
+    }
+
+    /* -- Comment -- */
+    #comment {
+        width: 60%;
+    }
+}
+
+/* -- Grid View -- */
+.cols-1 {
+    max-width: 10%;
+}
+
+.cols-2 {
+    max-width: 20%;
+}
+
+.cols-3 {
+    max-width: 30%;
+}
+
+.cols-4 {
+    max-width: 40%;
+}
+
+.cols-5 {
+    max-width: 50%;
+}
+
+.cols-6 {
+    max-width: 60%;
+}
+
+.cols-7 {
+    max-width: 70%;
+}
+
+.cols-8 {
+    max-width: 80%;
+}
+
+.cols-9 {
+    max-width: 90%;
+}
+
+.cols-10 {
+    max-width: 100%;
+}
+
+/* -- Fonts -- */
+@font-face {
+    font-family: PT-Serif;
+    src: url(../fonts/PT_Serif/PTSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: PT-Serif;
+    src: url(../fonts/PT_Serif/PTSerif-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: PT-Sans;
+    src: url(../fonts/PT_Sans/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: PT-Sans;
+    src: url(../fonts/PT_Sans/PTSans-Bold.ttf);
+    font-weight: bold;
+}
