@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/iconPage.png">
+
+    <script src="https://kit.fontawesome.com/86b64b6fd2.js" crossorigin="anonymous" defer></script>
+    <script type="module" src="../javascript/script.js" defer></script>
+    <script src="../javascript/variables.js" defer></script>
+</head>
+<body>
+    
+    <!-- Content of website -->
+    <main>
+        
+        <!-- Main Content -->
+        <section class="mainContent">
+
+            <!-- Page Header -->
+            <header><h1 id="pageHeader">Checkout</h1></header>
+
+            <!-- Shop Info -->
+            <section class="shopInfo">
+
+                <!-- Products -->
+                <div class="product">
+                    <div class="productImage">
+                        <img src="../images/backpack.jpg" alt="Backpack Image">
+                    </div>
+
+                    <div class="productInfo">
+                        <h5 class="productName">Beautiful Backpack</h5>
+                        <p class="productPrice"><strong>$62.00</strong> <span>$96.00</span></p>
+
+                        <div class="productQuantity">
+                            <div class="minus" id="minus-1">-</div>
+                            <div class="quantity" id="quantity-1">0</div>
+                            <div class="plus" id="plus-1">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="productImage">
+                        <img src="../images/shoes.jpg" alt="Shoes Image">
+                    </div>
+
+                    <div class="productInfo">
+                        <h5 class="productName">Beautiful Shoes</h5>
+                        <p class="productPrice"><strong>$24.00</strong> <span>$49.00</span></p>
+
+                        <div class="productQuantity">
+                            <div class="minus" id="minus-2">-</div>
+                            <div class="quantity" id="quantity-2">0</div>
+                            <div class="plus" id="plus-2">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Price -->
+                <div class="total">
+                    <strong>Shipping</strong>
+                    <span>$19.00</span>
+                </div>
+
+                <div class="total">
+                    <strong>Total</strong>
+                    <span id="totalPrice">$0.00</span>
+                </div>
+            </section>
+
+            <!-- User Info -->
+            <section class="userInfo">
+
+                <!-- Contact Info -->
+                <div class="contact">
+                    <h3>Contact Information</h3>
+
+                    <!-- Email -->
+                    <div id="email" class="form-div-input">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" id="inputEmail" name="inputEmail" class="form-input" placeholder="Enter your email..." pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}" form="userForm" required autocomplete="None">
+                    </div>
+
+                    <!-- Phone -->
+                    <div id="phone" class="form-div-input">
+                        <label for="inputPhone">Phone</label>
+                        <input type="tel" id="inputPhone" name="inputPhone" class="form-input" placeholder="Enter your phone number..." pattern="\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?" form="userForm" required autocomplete="None">
+                    </div>
+                </div>
+
+                <!-- Shipping Info -->
+                <div class="shippingAddress">
+                    <h3>Shipping Address</h3>
+
+                    <!-- Fullname -->
+                    <div id="fullName" class="form-div-input">
+                        <label for="inputFullName">Full Name</label>
+                        <input type="text" id="inputFullName" name="inputFullName" class="form-input" placeholder="Your full name..." pattern="^[ a-zA-Z]+$" form="userForm" required autocomplete="None">
+                    </div>
+
+                    <!-- Address -->
+                    <div id="address" class="form-div-input">
+                        <label for="inputAddress">Adress</label>
+                        <input type="text" id="inputAddress" name="inputAddress" class="form-input" placeholder="Your address..." pattern="[A-Za-z0-9'\.\-\s\,]" form="userForm" required autocomplete="None">
+                    </div>
+
+                    <!-- City -->
+                    <div id="city" class="form-div-input">
+                        <label for="inputCity">City</label>
+                        <input type="text" id="inputCity" name="inputCity" class="form-input" placeholder="Your city..." pattern="^[ a-zA-Z-]+$" form="userForm" required autocomplete="None">
+                    </div>
+
+                    <!-- Country -->
+                    <div id="country" class="form-div-input">
+                        <label for="inputCountry">Country</label>
+                        <select id="inputCountry" name="inputCountry" class="form-input" form="userForm" required>
+                            <option value="" disabled selected>Your country...</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Italy">Italy</option>
+                        </select>
+                    </div>
+
+                    <!-- Postal Code -->
+                    <div id="postalCode" class="form-div-input">
+                        <label for="inputPostalCode">Postal Code</label>
+                        <input type="text" id="inputPostalCode" name="inputPostalCode" class="form-input" placeholder="Your postal code..." form="userForm" pattern="\d{5}([ \-]\d{4})?" required autocomplete="None">
+                    </div>
+
+                    <!-- Save Info Checkbox -->
+                    <div id="saveInfo" class="form-div-input">
+                        <input type="checkbox" id="inputCheck" name="inputCheck" form="userForm">
+                        <label id="checkLabel" for="inputCheck">Save this information for next time</label>
+                    </div>
+                </div>
+
+                <!-- Continue and Submit Button -->
+                <div class="continue">
+                    <button type="submit" id="continueBtn" form="userForm">Continue</button>
+                </div>
+
+                <!-- User Form -->
+                <form id="userForm"></form>
+            </section>
+        </section>
+
+        <!-- Author Information -->
+        <footer>
+            <div>created by <strong>Samuel Godinho Melo</strong></div>
+        </footer>
+    </main>
+</body>
+</html>

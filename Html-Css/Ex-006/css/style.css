@@ -1,0 +1,345 @@
+/* ===== ROOT ===== */
+:root {
+    /* - Fonts - */
+    --font: Roboto, sans-serif;
+
+    /* - Font Sizes - */
+    --fontSizeHeader: 2.5em;
+    --fontSizeMedium: 1.1em;
+
+    /* - Colors - */
+    --headerColor: rgb(83,87,84);
+    --normalColor: rgb(121,122,120);
+    --shopInfoBG: rgb(242,242,242);
+    --yellowOrange: rgb(243,156,79);
+    --yellowOrangeD: rgb(233,147,70);
+    --greenBG: rgba(50, 230, 50, 0.4);
+
+    /* - Border Radius - */
+    --borderRadius: 1em;
+    --inputRadius: 0.8em;
+}
+
+/* ===== OVERALL ELEMENTS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+img {
+    width: 10em;
+    height: 10em;
+    border-radius: var(--borderRadius);
+}
+
+input {
+    display: block;
+}
+
+h3 {
+    color: black;
+}
+
+/* ===== PAGE HEADER ===== */
+#pageHeader {
+    grid-area: header;
+    font-size: var(--fontSizeHeader);
+    color: var(--headerColor);
+}
+
+/* ===== MAIN CONTENT ===== */
+.mainContent {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'shopInfo'
+    'userInfo';
+    grid-template-rows: 3em 32em 48em;
+    row-gap: 2em;
+    margin: 1em auto 5em;
+    width: 26.25em;
+}
+
+/* ===== USER INFO ===== */
+section.userInfo {
+    grid-area: userInfo;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: var(--normalColor);
+}
+
+/* ===== USER FORM ===== */
+form#userForm {
+    display: none;
+}
+
+/* ===== CONTACT CLASS ===== */
+div.contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 11em;
+}
+
+/* ===== FORM-DIV-INPUT ===== */
+div.form-div-input label {
+    color: var(--headerColor);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* ===== FORM-INPUT ===== */
+.form-input {
+    width: 100%;
+    height: 2.6em;
+    border: 0.1em solid var(--normalColor);
+    border-radius: var(--inputRadius);
+    font-size: 1em;
+    padding: 0.2em;
+    padding-left: 2.5em;
+    transition: all .2s linear;
+}
+
+.form-input:valid {
+    background-color: var(--greenBG);
+    border-color: green;
+} 
+
+/* ===== ICONS FOR INPUTS =====*/
+input#inputEmail {
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+}
+
+input#inputPhone {
+    background-image: url(../images/phone.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+}
+
+input#inputFullName {
+    background-image: url(../images/profile.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+}
+
+input#inputAddress {
+    background-image: url(../images/address.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+}
+
+input#inputCity {
+    background-image: url(../images/city.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+}
+
+select#inputCountry {
+    background-image: url(../images/country.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+    cursor: pointer;
+}
+
+input#inputPostalCode {
+    background-image: url(../images/postalCode.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0.5em center;
+}
+
+/* ===== SHIPPING ADDRESS ===== */
+div.shippingAddress {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 28em;
+}
+
+/* ===== SAVE INFO ===== */
+div#saveInfo input {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+}
+
+div#saveInfo label {
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* ===== CONTINUE BUTTON ===== */
+div.continue {
+    align-self: flex-end;
+}
+
+div.continue button {
+    padding: .8em 2em;
+    border: none;
+    border-radius: var(--inputRadius);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--yellowOrange);
+    cursor: pointer;
+}
+
+div.continue button:hover {
+    background-color: var(--yellowOrangeD);
+}
+
+/* ===== SHOP INFO ===== */
+.shopInfo {
+    grid-area: shopInfo;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    background-color: var(--shopInfoBG);
+    border-radius: var(--borderRadius);
+}
+
+/* ===== PRODUCT ===== */
+.product {
+    display: grid;
+    grid-template-areas: 'image info';
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1em;
+    margin: 0 1.5em;
+}
+
+/* ===== PRODUCT IMAGE ===== */
+.productImage {
+    grid-area: image;
+}
+
+/* ===== PRODUCT INFO ===== */
+.productInfo {
+    grid-area: info;
+    display: grid;
+    grid-template-areas: 'name'
+    'price'
+    'quantity';
+    grid-template-rows: 2em 4em 4em;
+    color: var(--normalColor);
+}
+
+/* ===== PRODUCT NAME ===== */
+.productName {
+    grid-area: name;
+    font-size: var(--fontSizeMedium);
+}
+
+/* ===== PRODUCT PRICE ===== */
+.productPrice {
+    grid-area: price;
+}
+
+.productPrice strong {
+    color: var(--yellowOrange);
+    font-size: 1.25em;
+    margin-right: 0.5em;
+}
+
+.productPrice span {
+    text-decoration-line: line-through;
+}
+
+/* ===== PRODUCT QUANTITY ===== */
+.productQuantity {
+    --quantityColor: rgb(166,167,167);
+    grid-area: quantity;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1em solid var(--quantityColor);
+    border-radius: var(--borderRadius);
+    color: black;
+    font-size: 1.6em;
+}
+
+/* ===== MINUS AND PLUS ===== */
+.minus, .plus {
+    background-color: rgb(225,225,224);
+    border: 0.05em solid transparent;
+    border-radius: 0.2em;
+    padding: 0 0.3em;
+    cursor: pointer;
+}
+
+/* ===== TOTAL ===== */
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5em;
+    padding-top: 0.2em;
+    font-size: var(--fontSizeMedium);
+    border-top: 0.05em solid rgb(195,194,194);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    color: var(--normalColor);
+    font-size: var(--fontSizeMedium);
+}
+
+footer strong {
+    text-decoration-line: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media screen and (min-width: 768px) {
+    
+    .mainContent {
+        grid-template-areas:
+        'header header'
+        'userInfo shopInfo';
+        grid-template-columns: auto 23.5em;
+        grid-template-rows: 3em 48em;
+        column-gap: 4%;
+        width: 85%;
+    }
+
+    .shopInfo {
+        height: 32em;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .mainContent {
+        column-gap: 15%;
+    }
+}
+
+@media screen and (min-width: 1148px) {
+
+    .mainContent {
+        column-gap: 20%;
+        width: 80%;
+    }
+}
+
+/* ===== FONTS ===== */
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}

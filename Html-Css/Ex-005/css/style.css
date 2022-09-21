@@ -1,0 +1,152 @@
+/* === Root === */
+:root {
+    --small-font: 0.9em;
+    --big-font: 1.04em;
+    --border-radius: 1em;
+    --strong-color: rgb(104,106,107);
+    --lighter-color: rgb(171,171,170);
+    --div-bg: rgb(229,229,229);
+}
+
+/* === Overall Elements === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+img {
+    border-radius: var(--border-radius);
+}
+
+/* === Avatar Container === */
+.avatarContainer {
+    margin: 1.9em 0 1.25em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+/* - Avatar - */
+.avatar img {
+    width: 9em;
+    height: 9em;
+}
+
+/* - Avatar Name - */
+.avatarName {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.avatarName strong {
+    font-size: var(--big-font);
+    color: var(--strong-color);
+}
+
+.avatarName p {
+    color: var(--lighter-color);
+    font-size: var(--small-font);
+}
+
+/* === Profile Info === */
+.profileInfo {
+    display: flex;
+    justify-content: center;
+}
+
+/* - Info - */
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 6.5em;
+    border-radius: var(--border-radius);
+    background-color: var(--div-bg);
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+.info:first-child, .info:last-child {
+    margin: 0 1em;
+}
+
+/* - Numbers - */
+.numbers {
+    font-size: var(--big-font);
+    color: var(--strong-color);
+}
+
+/* - Info Type -*/
+.infoType {
+    font-size: var(--small-font);
+    color: var(--lighter-color);
+}
+
+/* === Gallery === */
+.gallery {
+    margin: 3em 5%;
+    display: grid;
+    gap: 1em;
+    grid-template-areas: 'first second second' 
+    'third third forth' 'fifth sixth forth';
+}
+
+/* - Gallery Item - */
+.gallery img {
+    object-fit: fill;
+    max-width: 100%;
+    height: 100%;
+}
+
+/* <- Landscapes -> */
+#landscape1 {
+    grid-area: first;
+}
+
+#landscape2 {
+    grid-area: second;
+}
+
+#landscape3 {
+    grid-area: third;
+}
+
+#landscape4 {
+    grid-area: forth;
+}
+
+#landscape5 {
+    grid-area: fifth;
+}
+
+#landscape6 {
+    grid-area: sixth;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding-bottom: .5em;
+    color: var(--lighter-color);
+    font-size: var(--small-font);
+}
+
+footer strong {
+    color: var(--strong-color);
+    font-size: var(--big-font);
+}
+
+/* === Media Queries === */
+@media screen and (min-width: 768px) {
+    /* --- Gallery --- */
+    .gallery {
+        margin: 3em 10%;
+    }
+}
+
+/* === Fonts === */
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
